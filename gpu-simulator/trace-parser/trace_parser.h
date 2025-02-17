@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 #include <cstdint>
+#include <stdint.h>
 #ifndef TRACE_PARSER_H
 #define TRACE_PARSER_H
 
