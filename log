@@ -1,0 +1,261 @@
+Environment variables have been set up for temporary work.
+GPGPUSIM_SETUP_ENVIRONMENT_WAS_RUN=1
+ACCELSIM_SETUP_ENVIRONMENT_WAS_RUN=1
+make: Entering directory '/home/accel-sim-framework/gpu-simulator'
+if [ ! -d ./bin/release ]; then mkdir -p ./bin/release; fi;
+if [ ! -d ./build/release ]; then mkdir -p ./build/release; fi;
+touch ./build/release/main.makedepend
+makedepend -f./build/release/main.makedepend -p./build/release/ main.cc 2> /dev/null
+make -C trace-driven depend
+make -C trace-parser depend
+make -C /home/accel-sim-framework/gpgpu-sim
+echo "const char *g_accelsim_version=\"accelsim-commit-9f02a82_modified_2.0_25-03-02-10-05-53\";" > ./build/release/accelsim_version.h
+make[1]: Entering directory '/home/accel-sim-framework/gpu-simulator/trace-parser'
+make[1]: Entering directory '/home/accel-sim-framework/gpu-simulator/trace-driven'
+make[1]: Entering directory '/home/accel-sim-framework/gpgpu-sim'
+touch ../build/release/trace-driven.Makefile.makedepend
+touch ../build/release/trace-parser.Makefile.makedepend
+makedepend -f../build/release/trace-driven.Makefile.makedepend -p../build/release/ trace_driven.cc 2> /dev/null
+makedepend -f../build/release/trace-parser.Makefile.makedepend -p../build/release/ trace_parser.cc 2> /dev/null
+make[1]: 'depend' is up to date.
+make[1]: Leaving directory '/home/accel-sim-framework/gpu-simulator/trace-parser'
+make -C trace-parser
+make[1]: Entering directory '/home/accel-sim-framework/gpu-simulator/trace-parser'
+make[1]: 'depend' is up to date.
+make[1]: Leaving directory '/home/accel-sim-framework/gpu-simulator/trace-driven'
+make -C trace-driven
+make[1]: Entering directory '/home/accel-sim-framework/gpu-simulator/trace-driven'
+touch ../build/release/trace-parser.Makefile.makedepend
+makedepend -f../build/release/trace-parser.Makefile.makedepend -p../build/release/ trace_parser.cc 2> /dev/null
+touch ../build/release/trace-driven.Makefile.makedepend
+makedepend -f../build/release/trace-driven.Makefile.makedepend -p../build/release/ trace_driven.cc 2> /dev/null
+make[1]: Nothing to be done for 'trace-parser'.
+make[1]: Leaving directory '/home/accel-sim-framework/gpu-simulator/trace-parser'
+make[1]: Nothing to be done for 'trace-driven'.
+make[1]: Leaving directory '/home/accel-sim-framework/gpu-simulator/trace-driven'
+
+	Building GPGPU-Sim version 4.2.0 (build gpgpu-sim_git-commit-63e25487_modified_4.0) with CUDA version 11.8
+
+if [ ! -d lib/gcc-13.3.0/cuda-11080/release ]; then mkdir -p lib/gcc-13.3.0/cuda-11080/release; fi;
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda; fi;
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim; fi;
+Warning: gpgpu-sim is building without opencl support. Make sure NVOPENCL_LIBDIR and NVOPENCL_INCDIR are set
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/decuda_pred_table ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/decuda_pred_table; fi;
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim; fi;
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libopencl ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libopencl; fi;
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libopencl/bin ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libopencl/bin; fi;
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/intersim2 ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/intersim2; fi;
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuobjdump_to_ptxplus ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuobjdump_to_ptxplus; fi;
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch; fi;
+if [ ! -d /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/cacti ]; then mkdir -p /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/cacti; fi;
+make -C ./src/cuda-sim/ depend
+make -C /home/accel-sim-framework/gpgpu-sim/src/accelwattch/ depend
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/cuda-sim'
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch'
+make[3]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/ Ucache.cc XML_Parse.cc arbiter.cc area.cc array.cc bank.cc basic_circuit.cc basic_components.cc cacti_interface.cc component.cc core.cc crossbar.cc decoder.cc htree2.cc interconnect.cc io.cc iocontrollers.cc logic.cc main.cc mat.cc memoryctrl.cc noc.cc nuca.cc parameter.cc processor.cc router.cc sharedcache.cc subarray.cc technology.cc uca.cc wire.cc xmlParser.cc gpgpu_sim_wrapper.cc  2> /dev/null
+make -C ./cacti/ depend
+make[4]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch/cacti'
+make[5]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch/cacti'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/cacti/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/cacti/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/cacti/ area.cc bank.cc mat.cc main.cc Ucache.cc io.cc technology.cc basic_circuit.cc parameter.cc decoder.cc component.cc uca.cc subarray.cc wire.cc htree2.cc cacti_interface.cc router.cc nuca.cc crossbar.cc arbiter.cc  2> /dev/null
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ cuda_device_printf.cc cuda_device_runtime.cc cuda-sim.cc instructions.cc memory.cc ptx_ir.cc ptx_loader.cc ptx_parser.cc ptx_sim.cc ptx-stats.cc 2> /dev/null
+make[5]: Nothing to be done for 'depend'.
+make[5]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch/cacti'
+make[4]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch/cacti'
+make[3]: Nothing to be done for 'depend'.
+make[3]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch'
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch'
+make -C /home/accel-sim-framework/gpgpu-sim/src/accelwattch/ 
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch'
+make[3]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/ Ucache.cc XML_Parse.cc arbiter.cc area.cc array.cc bank.cc basic_circuit.cc basic_components.cc cacti_interface.cc component.cc core.cc crossbar.cc decoder.cc htree2.cc interconnect.cc io.cc iocontrollers.cc logic.cc main.cc mat.cc memoryctrl.cc noc.cc nuca.cc parameter.cc processor.cc router.cc sharedcache.cc subarray.cc technology.cc uca.cc wire.cc xmlParser.cc gpgpu_sim_wrapper.cc  2> /dev/null
+make[2]: 'depend' is up to date.
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/cuda-sim'
+make -C ./src/cuda-sim/
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/cuda-sim'
+make -C ./cacti/ depend
+make[4]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch/cacti'
+make[5]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch/cacti'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/cacti/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/cacti/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/cacti/ area.cc bank.cc mat.cc main.cc Ucache.cc io.cc technology.cc basic_circuit.cc parameter.cc decoder.cc component.cc uca.cc subarray.cc wire.cc htree2.cc cacti_interface.cc router.cc nuca.cc crossbar.cc arbiter.cc  2> /dev/null
+make[5]: Nothing to be done for 'depend'.
+make[5]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch/cacti'
+make[4]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch/cacti'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch'
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/accelwattch'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ cuda_device_printf.cc cuda_device_runtime.cc cuda-sim.cc instructions.cc memory.cc ptx_ir.cc ptx_loader.cc ptx_parser.cc ptx_sim.cc ptx-stats.cc 2> /dev/null
+g++  -c -O3 -g3 -Wall -Wno-unused-function -Wno-sign-compare -I/usr/local/cuda-11.8/include  -I/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ -I. -I/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release -fPIC  -DTRACING_ON=1 -DCUDART_VERSION=11080 -std=c++0x cuda-sim.cc -o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/cuda-sim.o
+In file included from ../gpgpu-sim/shader.h:54,
+                 from cuda-sim.h:37,
+                 from cuda-sim.cc:33:
+../gpgpu-sim/gpu-cache.h: In constructor ‘baseline_cache::baseline_cache(const char*, cache_config&, int, int, mem_fetch_interface*, mem_fetch_status, cache_gpu_level, gpgpu_sim*)’:
+../gpgpu-sim/gpu-cache.h:1483:24: warning: ‘baseline_cache::m_bandwidth_management’ will be initialized after [-Wreorder]
+ 1483 |   bandwidth_management m_bandwidth_management;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+../gpgpu-sim/gpu-cache.h:1403:19: warning:   ‘cache_gpu_level baseline_cache::m_level’ [-Wreorder]
+ 1403 |   cache_gpu_level m_level;
+      |                   ^~~~~~~
+../gpgpu-sim/gpu-cache.h:1286:3: warning:   when initialized here [-Wreorder]
+ 1286 |   baseline_cache(const char *name, cache_config &config, int core_id,
+      |   ^~~~~~~~~~~~~~
+ar rcs /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/libgpgpu_ptx_sim.a /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ptx.tab.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/lex.ptx_.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ptxinfo.tab.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/lex.ptxinfo_.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ptx_parser.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ptx_loader.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/cuda_device_printf.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/instructions.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/cuda-sim.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ptx_ir.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ptx_sim.o  /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/memory.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ptx-stats.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/decuda_pred_table/decuda_pred_table.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ptx.tab.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/lex.ptx_.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/ptxinfo.tab.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/lex.ptxinfo_.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/cuda_device_runtime.o
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/cuda-sim'
+make -C ./src/gpgpu-sim/ depend
+make -C ./libcuda/ depend
+make -C ./cuobjdump_to_ptxplus/ depend
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/gpgpu-sim'
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/libcuda'
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/cuobjdump_to_ptxplus'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuobjdump_to_ptxplus/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuobjdump_to_ptxplus/Makefile.makedepend cuobjdumpInst.cc cuobjdumpInstList.cc cuobjdump_to_ptxplus.cc 2> /dev/null
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/cuobjdump_to_ptxplus'
+make -C ./cuobjdump_to_ptxplus/
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/cuobjdump_to_ptxplus'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/cuobjdump_to_ptxplus'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/ cuda_runtime_api.cc 2> /dev/null
+make[2]: 'depend' is up to date.
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/libcuda'
+make -C ./libcuda/
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/libcuda'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/ addrdec.cc dram.cc dram_sched.cc gpu-cache.cc gpu-misc.cc gpu-sim.cc hashing.cc histogram.cc icnt_wrapper.cc l2cache.cc local_interconnect.cc mem_fetch.cc mem_latency_stat.cc power_interface.cc power_stat.cc scoreboard.cc shader.cc stack.cc stat-tool.cc traffic_breakdown.cc visualizer.cc 2> /dev/null
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/ cuda_runtime_api.cc 2> /dev/null
+make[2]: 'depend' is up to date.
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/gpgpu-sim'
+make -C ./src/gpgpu-sim/
+echo /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/cuda_runtime_api.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/cuobjdump_lexer.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/cuobjdump_parser.o
+/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/cuda_runtime_api.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/cuobjdump_lexer.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/cuobjdump_parser.o
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/gpgpu-sim'
+ibcuda/libcuda.a /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/cuda_runtime_api.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/cuobjdump_lexer.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/cuobjdump_parser.o
+ a     
+   �   �7     a     
+   �   �7     a     
+   �   �7     a    make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/libcuda'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/ addrdec.cc dram.cc dram_sched.cc gpu-cache.cc gpu-misc.cc gpu-sim.cc hashing.cc histogram.cc icnt_wrapper.cc l2cache.cc local_interconnect.cc mem_fetch.cc mem_latency_stat.cc power_interface.cc power_stat.cc scoreboard.cc shader.cc stack.cc stat-tool.cc traffic_breakdown.cc visualizer.cc 2> /dev/null
+g++  -O3 -g3 -fPIC -DCUDART_VERSION=11080 -Wall -DTRACING_ON=1 -std=c++0x -I/usr/local/cuda-11.8/include -I/home/accel-sim-framework/gpgpu-sim/src/accelwattch/ -DGPGPUSIM_POWER_MODEL -o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/gpu-sim.o -c gpu-sim.cc
+In file included from gpu-sim.h:44,
+                 from gpu-sim.cc:33:
+gpu-cache.h: In constructor ‘baseline_cache::baseline_cache(const char*, cache_config&, int, int, mem_fetch_interface*, mem_fetch_status, cache_gpu_level, gpgpu_sim*)’:
+gpu-cache.h:1483:24: warning: ‘baseline_cache::m_bandwidth_management’ will be initialized after [-Wreorder]
+ 1483 |   bandwidth_management m_bandwidth_management;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+gpu-cache.h:1403:19: warning:   ‘cache_gpu_level baseline_cache::m_level’ [-Wreorder]
+ 1403 |   cache_gpu_level m_level;
+      |                   ^~~~~~~
+gpu-cache.h:1286:3: warning:   when initialized here [-Wreorder]
+ 1286 |   baseline_cache(const char *name, cache_config &config, int core_id,
+      |   ^~~~~~~~~~~~~~
+gpu-sim.cc: In member function ‘void sst_gpgpu_sim::SST_cycle()’:
+gpu-sim.cc:2365:32: warning: variable ‘sec’ set but not used [-Wunused-but-set-variable]
+ 2365 |     time_t days, hrs, minutes, sec;
+      |                                ^~~
+ar rcs  /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/libgpu_uarch_sim.a /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/addrdec.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/dram.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/dram_sched.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/gpu-cache.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/gpu-misc.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/gpu-sim.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/hashing.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/histogram.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/icnt_wrapper.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/l2cache.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/local_interconnect.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/mem_fetch.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/mem_latency_stat.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/power_interface.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/power_stat.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/scoreboard.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/shader.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/stack.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/stat-tool.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/traffic_breakdown.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/visualizer.o
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/gpgpu-sim'
+make "CREATE_LIBRARY=1" "DEBUG=0" -C ./src/intersim2
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/intersim2'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/intersim2/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/intersim2/Makefile.makedepend -I-I. -Iarbiters -Iallocators -Irouters -Inetworks -Ipower -I/home/accel-sim-framework/gpgpu-sim/src -I/home/accel-sim-framework/gpgpu-sim/src/gpgpu-sim/ -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/intersim2/ config_utils.cpp booksim_config.cpp module.cpp buffer.cpp vc.cpp routefunc.cpp traffic.cpp flitchannel.cpp trafficmanager.cpp batchtrafficmanager.cpp packet_reply_info.cpp buffer_state.cpp stats.cpp credit.cpp outputset.cpp flit.cpp injection.cpp misc_utils.cpp rng_wrapper.cpp rng_double_wrapper.cpp power_module.cpp switch_monitor.cpp buffer_monitor.cpp main.cpp gputrafficmanager.cpp intersim_config.cpp interconnect_interface.cpp allocators/allocator.cpp allocators/islip.cpp allocators/loa.cpp allocators/maxsize.cpp allocators/pim.cpp allocators/selalloc.cpp allocators/separable.cpp allocators/separable_input_first.cpp allocators/separable_output_first.cpp allocators/wavefront.cpp arbiters/arbiter.cpp arbiters/matrix_arb.cpp arbiters/prio_arb.cpp arbiters/roundrobin_arb.cpp arbiters/tree_arb.cpp networks/anynet.cpp networks/cmesh.cpp networks/dragonfly.cpp networks/fattree.cpp networks/flatfly_onchip.cpp networks/fly.cpp networks/kncube.cpp networks/network.cpp networks/qtree.cpp networks/tree4.cpp power/buffer_monitor.cpp power/power_module.cpp power/switch_monitor.cpp routers/chaos_router.cpp routers/event_router.cpp routers/iq_router.cpp routers/router.cpp 2> /dev/null
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/intersim2'
+make -C ./src/ depend
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/ abstract_hardware_model.cc debug.cc gpgpusim_entrypoint.cc option_parser.cc statwrapper.cc stream_manager.cc trace.cc 2> /dev/null
+make[2]: 'depend' is up to date.
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src'
+make -C ./src/
+make[2]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/ abstract_hardware_model.cc debug.cc gpgpusim_entrypoint.cc option_parser.cc statwrapper.cc stream_manager.cc trace.cc 2> /dev/null
+make   -C ./gpgpu-sim
+make[3]: Entering directory '/home/accel-sim-framework/gpgpu-sim/src/gpgpu-sim'
+touch /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/Makefile.makedepend
+makedepend -f/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/Makefile.makedepend -p/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/ addrdec.cc dram.cc dram_sched.cc gpu-cache.cc gpu-misc.cc gpu-sim.cc hashing.cc histogram.cc icnt_wrapper.cc l2cache.cc local_interconnect.cc mem_fetch.cc mem_latency_stat.cc power_interface.cc power_stat.cc scoreboard.cc shader.cc stack.cc stat-tool.cc traffic_breakdown.cc visualizer.cc 2> /dev/null
+ar rcs  /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/libgpu_uarch_sim.a /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/addrdec.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/dram.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/dram_sched.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/gpu-cache.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/gpu-misc.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/gpu-sim.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/hashing.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/histogram.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/icnt_wrapper.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/l2cache.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/local_interconnect.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/mem_fetch.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/mem_latency_stat.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/power_interface.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/power_stat.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/scoreboard.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/shader.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/stack.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/stat-tool.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/traffic_breakdown.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/visualizer.o
+make[3]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src/gpgpu-sim'
+ar rcs  /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libgpgpusim.a /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/abstract_hardware_model.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/debug.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpusim_entrypoint.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/option_parser.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/statwrapper.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/stream_manager.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/trace.o /home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/*.o
+make[2]: Leaving directory '/home/accel-sim-framework/gpgpu-sim/src'
+g++ -shared -Wl,-soname,libcudart.so -Wl,--version-script=linux-so-version.txt\
+		/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/libcuda/*.o \
+		/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/*.o \
+		/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/cuda-sim/decuda_pred_table/*.o \
+		/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/gpgpu-sim/*.o \
+		/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/intersim2/*.o \
+		/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/*.o -lm -lz -lGL -pthread \
+		/home/accel-sim-framework/gpgpu-sim/build/gcc-13.3.0/cuda-11080/release/accelwattch/*.o \
+		-o lib/gcc-13.3.0/cuda-11080/release/libcudart.so
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.2 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.2; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.3 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.3; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.4 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.4; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.5.0 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.5.0; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.5.5 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.5.5; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.6.0 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.6.0; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.6.5 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.6.5; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.7.0 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.7.0; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.7.5 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.7.5; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.8.0 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.8.0; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.9.0 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.9.0; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.9.1 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.9.1; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.9.2 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.9.2; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.10.0 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.10.0; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.10.1 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.10.1; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.11.0 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.11.0; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart.so.12 ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart.so.12; fi
+if [ ! -f lib/gcc-13.3.0/cuda-11080/release/libcudart_mod.so ]; then ln -s libcudart.so lib/gcc-13.3.0/cuda-11080/release/libcudart_mod.so; fi
+make[1]: Leaving directory '/home/accel-sim-framework/gpgpu-sim'
+g++ -Wall -O3 -g3 -fPIC -std=c++17 -I./trace-driven -I./trace-parser -I/home/accel-sim-framework/gpgpu-sim/libcuda -I/home/accel-sim-framework/gpgpu-sim/src -I/usr/local/cuda-11.8/include -I./build/release -L/home/accel-sim-framework/gpgpu-sim/lib/gcc-13.3.0/cuda-11080/release/ -lcudart -lm -lz -lGL -pthread ./build/release/*.o  -o ./bin/release/accel-sim.out accel-sim.cc main.cc 
+In file included from /home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/shader.h:54,
+                 from /home/accel-sim-framework/gpgpu-sim/src/cuda-sim/cuda-sim.h:37,
+                 from accel-sim.h:13,
+                 from accel-sim.cc:1:
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/gpu-cache.h: In constructor ‘baseline_cache::baseline_cache(const char*, cache_config&, int, int, mem_fetch_interface*, mem_fetch_status, cache_gpu_level, gpgpu_sim*)’:
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/gpu-cache.h:1483:24: warning: ‘baseline_cache::m_bandwidth_management’ will be initialized after [-Wreorder]
+ 1483 |   bandwidth_management m_bandwidth_management;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/gpu-cache.h:1403:19: warning:   ‘cache_gpu_level baseline_cache::m_level’ [-Wreorder]
+ 1403 |   cache_gpu_level m_level;
+      |                   ^~~~~~~
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/gpu-cache.h:1286:3: warning:   when initialized here [-Wreorder]
+ 1286 |   baseline_cache(const char *name, cache_config &config, int core_id,
+      |   ^~~~~~~~~~~~~~
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/shader.h: At global scope:
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/shader.h:204:24: warning: ‘virtual address_type shd_warp_t::get_pc() const’ was hidden [-Woverloaded-virtual=]
+  204 |   virtual address_type get_pc() const { return m_next_pc; }
+      |                        ^~~~~~
+In file included from accel-sim.h:19:
+./trace-driven/trace_driven.h:154:24: note:   by ‘virtual address_type trace_shd_warp_t::get_pc()’
+  154 |   virtual address_type get_pc();
+      |                        ^~~~~~
+In file included from /home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/shader.h:54,
+                 from /home/accel-sim-framework/gpgpu-sim/src/cuda-sim/cuda-sim.h:37,
+                 from accel-sim.h:13,
+                 from main.cc:4:
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/gpu-cache.h: In constructor ‘baseline_cache::baseline_cache(const char*, cache_config&, int, int, mem_fetch_interface*, mem_fetch_status, cache_gpu_level, gpgpu_sim*)’:
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/gpu-cache.h:1483:24: warning: ‘baseline_cache::m_bandwidth_management’ will be initialized after [-Wreorder]
+ 1483 |   bandwidth_management m_bandwidth_management;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/gpu-cache.h:1403:19: warning:   ‘cache_gpu_level baseline_cache::m_level’ [-Wreorder]
+ 1403 |   cache_gpu_level m_level;
+      |                   ^~~~~~~
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/gpu-cache.h:1286:3: warning:   when initialized here [-Wreorder]
+ 1286 |   baseline_cache(const char *name, cache_config &config, int core_id,
+      |   ^~~~~~~~~~~~~~
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/shader.h: At global scope:
+/home/accel-sim-framework/gpgpu-sim/src/cuda-sim/../gpgpu-sim/shader.h:204:24: warning: ‘virtual address_type shd_warp_t::get_pc() const’ was hidden [-Woverloaded-virtual=]
+  204 |   virtual address_type get_pc() const { return m_next_pc; }
+      |                        ^~~~~~
+In file included from accel-sim.h:19:
+./trace-driven/trace_driven.h:154:24: note:   by ‘virtual address_type trace_shd_warp_t::get_pc()’
+  154 |   virtual address_type get_pc();
+      |                        ^~~~~~
+make: Leaving directory '/home/accel-sim-framework/gpu-simulator'
